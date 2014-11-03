@@ -1,0 +1,1 @@
+{"Ivo": {"species": "panda", "weight_age_ratio": 10, "food_type": "bamboo", "live_expectancy": 6, "gestation_period": null, "new_born_weight": 20, "food_weight_ratio": 0.2}, "Mecho": {"species": "bear", "weight_age_ratio": 12, "food_type": "meat", "live_expectancy": 3, "gestation_period": null, "new_born_weight": 25, "food_weight_ratio": 0.4}}
