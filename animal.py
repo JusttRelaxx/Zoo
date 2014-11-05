@@ -18,9 +18,7 @@ class Animal:
         self.gender = gender
         self.weight = weight
         self.is_alive = True
-        
-        self.daily_food_consumption = food_weight_ratio * weight
-
+        self.daily_food_consumption = self.get_info("food_weight_ratio") * self.weight
     """def save_animals_to_json(self):
 
         animals[self.name] = {'species': self.species,
@@ -41,5 +39,12 @@ class Animal:
             self.weight += expected_weight
             self.age += age
 
-    def eat(self):
-        
+    def get_database(self):
+        with open("database.json", 'r') as load_file:
+            content = json.load(load_file)
+        return content
+
+    def get_info(self, info):
+        for animal in self.get_database()['Animals']:
+            if animal['species'] == self.species:
+                return animal[info]

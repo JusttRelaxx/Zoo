@@ -5,7 +5,7 @@
             "life_expectancy": 10,
             "food_type": "herbivore",
             "gestation_period": 3,
-            "newborn_weight": ,
+            "newborn_weight": 0.30,
             "average_weight": 300,
             "weight_age_ratio": 5,
             "food_weight_ratio": 0.06
