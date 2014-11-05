@@ -1,1 +1,34 @@
-{"Ivo": {"species": "panda", "weight_age_ratio": 10, "food_type": "bamboo", "live_expectancy": 6, "gestation_period": null, "new_born_weight": 20, "food_weight_ratio": 0.2}, "Mecho": {"species": "bear", "weight_age_ratio": 12, "food_type": "meat", "live_expectancy": 3, "gestation_period": null, "new_born_weight": 25, "food_weight_ratio": 0.4}}
+{
+    "Animals":  [
+        {
+            "species": "bear",
+            "life_expectancy": 10,
+            "food_type": "herbivore",
+            "gestation_period": 3,
+            "newborn_weight": ,
+            "average_weight": 300,
+            "weight_age_ratio": 5,
+            "food_weight_ratio": 0.06
+        },
+        {
+            "species": "panda",
+            "life_expectancy": 15,
+            "food_type": "herbivore",
+            "gestation_period": 5,
+            "newborn_weight": 0.14,
+            "average_weight": 120,
+            "weight_age_ratio": 4,
+            "food_weight_ratio": 0.1
+        },
+        {
+            "species": "tiger",
+            "life_expectancy": 20,
+            "food_type": "carnivore",
+            "gestation_period": 1,
+            "newborn_weight": 1,
+            "average_weight": 320,
+            "weight_age_ratio": 5,
+            "food_weight_ratio": 0.09
+        }
+    ]
+}
