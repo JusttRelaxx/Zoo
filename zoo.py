@@ -5,13 +5,15 @@ import json
 
 class Zoo:
 
+    INCOME_PER_ANIMAL = 60
+
     def __init__(self, animals, capacity, budget):
         self.animals = animals
         self.capacity = capacity
         self.budget = budget
 
-    def get_dailty_incomes(self):
-        return len(self.animals) * 60
+    def get_daily_incomes(self):
+        return len(self.animals) * Zoo.INCOME_PER_ANIMAL
 
     def get_daily_outcomes(self):
         daily_outcome = 0
@@ -28,7 +30,23 @@ class Zoo:
         else:
             raise OverflowError("Zoo is full of animals")
 
+    def see_animals(self):
+        for animal in self.animals:
+            print ("{} : {}, {}, {}, {}".format(
+                animal.name,
+                animal.species, animal.gender, animal.age, animal.weight))
 
-bear = Animal("bear", 12, "Pesho", "male", 60)
-bear.get_info("gestation_period")
-print (bear.daily_food_consumption)
+    def move_to_habitat(self, species, name):
+        for animal in self.animals:
+            if (animal.species == species and animal.name == name):
+                self.animals.remove(animal)
+
+    def reproduce(self):
+        pass
+
+    def remove_dead_animals(self):
+        list_of_alive_animals = []
+        for animal in self.animals:
+            if animal.is_alive:
+                list_of_alive_animals.append(animal)
+        self.animals = list_of_alive_animals

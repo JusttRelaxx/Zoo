@@ -19,19 +19,7 @@ class Animal:
         self.weight = weight
         self.is_alive = True
         self.daily_food_consumption = self.get_info("food_weight_ratio") * self.weight
-    """def save_animals_to_json(self):
 
-        animals[self.name] = {'species': self.species,
-                              'live_expectancy': self.life_expectancy,
-                              'food_type': self.food_type,
-                              'gestation_period': self.gestation_period,
-                              'weight_age_ratio': self.weight_age_ratio,
-                              'food_weight_ratio': self.food_weight_ratio,
-                              'new_born_weight': self.new_born_weight}
-
-        file = open('database.json', 'w+')
-        file.write(json.dumps(animals))
-        file.close()"""
 
     def grow(self, age):
         expected_weight = self.weight_age_ratio * age
