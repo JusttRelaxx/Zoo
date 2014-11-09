@@ -20,12 +20,15 @@ class Animal:
         self.is_alive = True
         self.daily_food_consumption = self.get_info("food_weight_ratio") * self.weight
 
+    def grow(self):
+        if self.is_alive:
+            self.age += 1
+            weight_age_ratio = self.get_info("weight_age_ratio")
+            self.weight += weight_age_ratio
 
-    def grow(self, age):
-        expected_weight = self.weight_age_ratio * age
-        if self.weight + expected_weight <= self.average_weight:
-            self.weight += expected_weight
-            self.age += age
+    def eat(self):
+        food_weight_ratio = self.get_info("food_weight_ratio")
+        self.weight += food_weight_ratio
 
     def get_database(self):
         with open("database.json", 'r') as load_file:
